@@ -1,0 +1,17 @@
+# get access token based on auth key
+#@baseURL = https://api.github.com
+
+
+curl -i -u myinger:{{authorization}} https://api.github.com/users/myinger/repos
+
+###
+
+GET {{baseURL}}/users/myinger/followers
+
+###
+
+GET {{baseURL}}/users/myinger/repos
+
+POST {{baseURL}}/token?grant_type=client_credentials
+Authorization: Basic {{authorization}}
+
